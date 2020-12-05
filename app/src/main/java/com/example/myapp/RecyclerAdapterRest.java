@@ -40,9 +40,9 @@ public class RecyclerAdapterRest extends RecyclerView.Adapter<RecyclerAdapterRes
 
         holder.textView.setText(restaurantData.get(position).getTitle());
         //image glide
-        Glide.with(mcontext)
+       /* Glide.with(mcontext)
                 .load(restaurantData.get(position).getImg())
-                .into(holder.imageView);
+                .into(holder.imageView);*/
     }
 
     @Override

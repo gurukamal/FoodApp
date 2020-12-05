@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         init();
 //new
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+       /* LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         restRecycler.setLayoutManager(layoutManager);
         restRecycler.setHasFixedSize(true);
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         ClearAll();
         //get data method
 
-        GetDataFromFirebase();
+        GetDataFromFirebase();*/
 
 
         //profile
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
     }
 
 
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                     RestaurantData restaurantData=new RestaurantData();
 
-                    restaurantData.setImg(snapshot.child("img").getValue().toString());
+                  //  restaurantData.setImg(snapshot.child("img").getValue().toString());
                     restaurantData.setTitle(snapshot.child("title").getValue().toString());
 
                     arrayList.add(restaurantData);
@@ -120,7 +121,19 @@ public class MainActivity extends AppCompatActivity {
     private void init() {
         btnProfile=findViewById(R.id.btn_profile);
         btnLogout=findViewById(R.id.btn_logout);
+/*
         restRecycler = findViewById(R.id.rest_recycler_view);
+*/
+
+    }
+
+    public void getRestaurant(View view) {
+        startActivity(new Intent(getApplicationContext(),RestaurantView.class));
+
+    }
+
+    public void getStreet(View view) {
+        startActivity(new Intent(getApplicationContext(),StreetView.class));
 
     }
 }

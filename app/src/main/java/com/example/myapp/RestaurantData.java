@@ -2,7 +2,7 @@ package com.example.myapp;
 
 public class RestaurantData {
 
-    String title,img;
+    String title,image;
 
     public RestaurantData(){
     }
@@ -15,11 +15,11 @@ public class RestaurantData {
         this.title = title;
     }
 
-    public String getImg() {
-        return img;
+    public String getImage() {
+        return image;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setImage(String image) {
+        this.image = image;
     }
 }

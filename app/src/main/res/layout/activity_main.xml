@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/black"
-                android:id="@+id/logo_title"
+
                 android:orientation="vertical">
 
                 <TextView
@@ -68,21 +68,21 @@
             android:textSize="16sp"
             android:fontFamily="@font/aclonica"
             android:layout_marginTop="18dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restaurant"
+            android:id="@+id/getRestaurant"
+            android:onClick="getRestaurant"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Street Food"
+            android:id="@+id/get_street_food"
+            android:onClick="getStreet"/>
 
     </LinearLayout>
 
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Restautrant"
-        android:id="@+id/open_rest" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Street"
-        android:id="@+id/open_street" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -117,11 +117,5 @@
             android:layout_marginLeft="25dp"
             android:id="@+id/btn_profile" />
     </LinearLayout>
-
-<androidx.recyclerview.widget.RecyclerView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/rest_recycler_view"
-    android:layout_below="@id/main_header" />
 
 </RelativeLayout>
